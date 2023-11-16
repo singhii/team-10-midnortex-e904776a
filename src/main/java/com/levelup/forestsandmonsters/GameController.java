@@ -55,7 +55,7 @@ public class GameController {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
         //Character character = new Character();
-        position =character.moveCharacter(directionToMove.toString());
+        position =character.moveCharacter(directionToMove);
     }
 
 
