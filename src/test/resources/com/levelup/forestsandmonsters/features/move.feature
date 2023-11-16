@@ -14,5 +14,8 @@ Feature: Move in a direction
         And the new move count is <endingMoveCount>
         Examples:
             | startingPositionX | startingPositionY | direction | startingMoveCount | endingPositionX | endingPositionY | endingMoveCount |
-            | 0 | 0 | NORTH | 10 | 0 | 1 | 11 |
-            | 0 | 0 | SOUTH | 32 | 0 | 0 | 33 |
+            | 0 | 0 | RIGHT | 0 | 1 | 0 | 1 |
+            | 0 | 0 | DOWN | 0 | 0 | 0 | 1 |
+            | 0 | 5 | LEFT | 5 | 0 | 5 | 6 |
+            | 9 | 9 | RIGHT | 21 | 9 | 9 | 22 |
+            | 4 | 8 | LEFT | 113 | 3 | 8 | 114 |
