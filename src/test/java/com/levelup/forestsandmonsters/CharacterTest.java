@@ -24,6 +24,15 @@ public class CharacterTest {
         String actualName=c.getName();
         assertEquals(expectedName,actualName);
     }
+     @Test
+    public void testGetPosition(){
+        Character c = new Character();
+        int xCoordinates = 0;
+        int yCoordinates = 0;
+        c.getPosition();
+        assertEquals((int)c.getPosition().getPosition().getX(),0);
+        assertEquals((int)c.getPosition().getPosition().getX(),0);
+    }
 
     /*public class testCharacterPosition {
         public static void testGetPosition
