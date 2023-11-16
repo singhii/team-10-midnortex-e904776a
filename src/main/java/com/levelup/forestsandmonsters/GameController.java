@@ -5,6 +5,9 @@ import java.awt.Point;
 public class GameController {
 
     static final String DEFAULT_CHARACTER_NAME = "Character";
+    Character character;
+    Position position;
+    
     
 
     public class GameStatus {
@@ -31,8 +34,10 @@ public class GameController {
     public void createCharacter(String name) {
         if (name != null && !name.equals("")) {
             status.characterName = name;
+            character = new Character(name);
         } else {
-            status.characterName = DEFAULT_CHARACTER_NAME;
+            character = new Character();
+            status.characterName = character.getName();
         }
     }
 
@@ -49,8 +54,8 @@ public class GameController {
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
-        Character character = new Character();
-        Position position =character.moveCharacter(directionToMove.toString());
+        //Character character = new Character();
+        position =character.moveCharacter(directionToMove.toString());
     }
 
 
