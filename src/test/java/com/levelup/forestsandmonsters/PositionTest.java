@@ -1,11 +1,12 @@
 package com.levelup.forestsandmonsters;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import ch.qos.logback.core.pattern.PostCompileProcessor;
 
 import java.awt.Point;
 import io.cucumber.java.Before;
-
+import org.junit.BeforeClass;
 
 import static org.junit.Assert.assertEquals;
 
@@ -35,9 +36,8 @@ public class PositionTest {
     public void testSetPosition()
     {
         Position position = new Position(3, 4);
-
-        position.setPosition(3, 4);
         
+        position.setPosition(3, 4);
         Point updatedPostion = position.getPosition();
 
         assertEquals(3, (int) updatedPostion.getX());
