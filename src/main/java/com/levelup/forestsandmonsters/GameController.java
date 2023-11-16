@@ -5,6 +5,7 @@ import java.awt.Point;
 public class GameController {
 
     static final String DEFAULT_CHARACTER_NAME = "Character";
+    
 
     public class GameStatus {
         // TODO: Add other status data
@@ -48,7 +49,10 @@ public class GameController {
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
+        Character character = new Character();
+        Position position =character.moveCharacter(directionToMove.toString());
     }
+
 
     public void setCharacterPosition(Point coordinates) {
         // TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
