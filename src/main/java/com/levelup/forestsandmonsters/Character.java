@@ -2,11 +2,10 @@ package com.levelup.forestsandmonsters;
 
 public class Character {
     String name;
-    String DEFAULT_CHARACTER_NAME;
-
+    String DEFAULT_CHARACTER_NAME= "Player 1";
 
     public Character(){
-        this.DEFAULT_CHARACTER_NAME="Player 1";
+        this.name=DEFAULT_CHARACTER_NAME;
     }
     public Character(String name){
         this.name=name;    
