@@ -6,7 +6,7 @@ public class Character {
 
 
     public Character(){
-
+        this.DEFAULT_CHARACTER_NAME="Player 1";
     }
     public Character(String name){
         this.name=name;    
