@@ -28,8 +28,8 @@ public class PositionTest {
 
         Point currentPosition =  position.getPosition();
 
-        assertEquals(1, (int) currentPosition.getX());
-        assertEquals(9, (int) currentPosition.getY());
+        assertEquals(1, (int) currentPosition.x);
+        assertEquals(9, (int) currentPosition.y);
     }
 
     @Test
@@ -40,8 +40,8 @@ public class PositionTest {
         position.setPosition(3, 4);
         Point updatedPostion = position.getPosition();
 
-        assertEquals(3, (int) updatedPostion.getX());
-        assertEquals(4, (int) updatedPostion.getY());
+        assertEquals(3, (int) updatedPostion.x);
+        assertEquals(4, (int) updatedPostion.y);
         
     }
 
