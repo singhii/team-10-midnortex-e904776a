@@ -5,9 +5,21 @@ public class Position {
 
     Point coordinates;
 
-    public  Position(int xCoordinates, int yCoordinates)
+    // constructor 
+    public Position(int xCoordinates, int yCoordinates)
     {
-      
+        this.coordinates = new Point(xCoordinates, yCoordinates);
     }
+
+    public Point getPosition() 
+    {
+        return coordinates;
+    }
+    
+    public void setPosition(int xCoordinates, int yCoordinates)
+    {
+        coordinates.setLocation(xCoordinates, yCoordinates);
+    }
+
     
 }
