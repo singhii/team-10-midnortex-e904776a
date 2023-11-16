@@ -2,11 +2,22 @@ package com.levelup.forestsandmonsters;
 
 
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 import static org.junit.Assert.assertEquals;
 
 public class CharacterTest {
 
+    int arbitraryX = 0;
+    int arbitraryY = 0;
+
+    @BeforeEach
+    public void testSetUp()
+    {
+         arbitraryX = 1;
+    }
     @Test
     public void testGetName(){
         Character c = new Character();
@@ -37,14 +48,14 @@ public class CharacterTest {
     @Test
     public void testMove() {
         Character c = new Character();
-        Position testPos = new Position(0,0);
-        String Direction="N";
-        Position newPos = new Position(0,0);
-        //newPos=c.moveCharacter(Direction);
-        Double currentX = testPos.getPosition().getX();
-        Double currentY = testPos.getPosition().getY();
-        Double newX = testPos.getPosition().getX();
-        Double newY = testPos.getPosition().getY();
+        Position testPos = new Position(arbitraryX,arbitraryY);
+        DIRECTION direction=DIRECTION.EAST;
+        Position newPos = new Position(0,arbitraryY);
+        newPos=c.moveCharacter(direction);
+        int currentX = testPos.getPosition().x;
+        int currentY = testPos.getPosition().y;
+        int newX = newPos.getPosition().x;
+        int newY = newPos.getPosition().y;
         assertEquals(currentX,newX);
         assertEquals(currentY,newY);
 
