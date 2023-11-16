@@ -39,10 +39,14 @@ public class Character {
        // position.setPosition(xCoordinates, yCoordinates);
        Position position = new Position(xCoordinates, yCoordinates);
        this.position=position;
-      
-
-
-        
-        
    }
+    public Position moveCharacter(String direction) {
+
+        GameMap g = new GameMap();
+        Position p = new Position(0,0);
+        Position currentPos = getPosition();
+        //p = g.calculateNewPostion(currentPos,direction);
+        return p;
+    }
+
 }

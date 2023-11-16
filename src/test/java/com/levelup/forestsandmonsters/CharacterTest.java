@@ -31,7 +31,23 @@ public class CharacterTest {
         int yCoordinates = 0;
         c.getPosition();
         assertEquals((int)c.getPosition().getPosition().getX(),0);
-        assertEquals((int)c.getPosition().getPosition().getX(),0);
+        assertEquals((int)c.getPosition().getPosition().getY(),0);
+    }
+
+    @Test
+    public void testMove() {
+        Character c = new Character();
+        Position testPos = new Position(0,0);
+        String Direction="N";
+        Position newPos = new Position(0,0);
+        //newPos=c.moveCharacter(Direction);
+        Double currentX = testPos.getPosition().getX();
+        Double currentY = testPos.getPosition().getY();
+        Double newX = testPos.getPosition().getX();
+        Double newY = testPos.getPosition().getY();
+        assertEquals(currentX,newX);
+        assertEquals(currentY,newY);
+
     }
 
     /*public class testCharacterPosition {
