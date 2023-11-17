@@ -9,5 +9,17 @@ public class GameControllerTest {
         GameController testObj = new GameController();
         assertNotNull(testObj.status);
     }
+
+    @Test
+    public void createCharacterTest() {
+        GameController testobj = new GameController();
+        testobj.createCharacter("Tester");
+            assertNotNull(testobj.status);
+    }
+
     
+
+    
+    
+
 }
