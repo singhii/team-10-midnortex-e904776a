@@ -33,33 +33,42 @@ public class GameMap {
         int newPositionX = 0;
         int newPositionY = 0;
 
-        
+        //System.out.println("in calc, direction = " + direction);
+
+        //System.out.println("in calc, startPositionX = " + startPositionX);
+        //System.out.println("in calc, startPositionY = " + startPositionY);
         if (direction.equals(DIRECTION.EAST))
         {
            //startPositionX = startingPosition.getPosition().x;
-           newPositionX = ++startPositionX;
+           newPositionX = startPositionX+1;
+           newPositionY = startPositionY;
           
         }
         else if(direction.equals(DIRECTION.WEST))
         {
             //startPositionX = startingPosition.getPosition().x;
-            newPositionX = --startPositionX;
+            newPositionX = startPositionX-1;
+            newPositionY = startPositionY;
         }
         else if(direction.equals(DIRECTION.NORTH))
         {
             //startPositionY = startingPosition.getPosition().y;
-            newPositionY = ++startPositionY;
+            newPositionY = startPositionY+1;
+            newPositionX = startPositionX;
         }
         else if(direction.equals(DIRECTION.SOUTH))
         {
             //startPositionY = startingPosition.getPosition().y;
-            newPositionY = ++startPositionY;
+            newPositionY = startPositionY-1;
+            newPositionX = startPositionX;
         }
         else{
             newPositionX = startPositionX;
             newPositionY = startPositionY;
         }
 
+        //System.out.println("in calc, newPositionX = " + newPositionX);
+        //System.out.println("in calc, newPositionY = " + newPositionY);
         calPosition.setPosition(newPositionX, newPositionY);
 
         return calPosition;

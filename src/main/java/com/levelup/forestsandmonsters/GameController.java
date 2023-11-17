@@ -47,9 +47,6 @@ public class GameController {
         // TODO: Should also update the game results?
         Point p = new Point(0,0);
         character.setPosition(p.x, p.y);
-        System.out.println("in start game character -" + this.character.getName());
-        System.out.println("in start game character position x-" + this.character.getPosition().coordinates.x);
-        System.out.println("in start game character position y-" + this.character.getPosition().coordinates.y);
         
     }
 
@@ -62,12 +59,13 @@ public class GameController {
         // TODO: Should probably also update the game results
         //Character character = new Character();
         position =character.moveCharacter(directionToMove);
+        //System.out.println("new position = " + position.coordinates.x + "y = " + position.coordinates.y);
         character.setPosition(position.getPosition().x, position.getPosition().y);
 
-        System.out.println("In Move, name = " + character.getName());
+        /*System.out.println("In Move, name = " + character.getName());
         System.out.println("Position = " + character.getPosition().getPosition().x);
         System.out.println("Position X= " + character.getPosition().coordinates.x);
-        System.out.println("Position Y= " + character.getPosition().coordinates.y);
+        System.out.println("Position Y= " + character.getPosition().coordinates.y);*/
         setCurrentMoveCount(1);
         
     }
