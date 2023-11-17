@@ -47,6 +47,8 @@ public class Character {
         GameMap g = new GameMap();
         Position p = new Position(0,0);
         Position currentPos = getPosition();
+        System.out.println("Current Pos x= " + currentPos.getPosition().x);
+        System.out.println("Current Pos y= " + currentPos.getPosition().y);
         p = g.calculatePosition(currentPos,direction);
         return p;
     }

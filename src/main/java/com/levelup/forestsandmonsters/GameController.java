@@ -15,7 +15,7 @@ public class GameController {
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
         // TODO: Write a failing unit test that will force you to set this to the right number
-        public int moveCount = -100;
+        public int moveCount = 0;
     }
 
     GameStatus status;
@@ -45,6 +45,12 @@ public class GameController {
         // TODO: Implement startGame - Should probably create tiles and put the character
         // on them?
         // TODO: Should also update the game results?
+        Point p = new Point(0,0);
+        character.setPosition(p.x, p.y);
+        System.out.println("in start game character -" + this.character.getName());
+        System.out.println("in start game character position x-" + this.character.getPosition().coordinates.x);
+        System.out.println("in start game character position y-" + this.character.getPosition().coordinates.y);
+        
     }
 
     public GameStatus getStatus() {
@@ -56,6 +62,14 @@ public class GameController {
         // TODO: Should probably also update the game results
         //Character character = new Character();
         position =character.moveCharacter(directionToMove);
+        character.setPosition(position.getPosition().x, position.getPosition().y);
+
+        System.out.println("In Move, name = " + character.getName());
+        System.out.println("Position = " + character.getPosition().getPosition().x);
+        System.out.println("Position X= " + character.getPosition().coordinates.x);
+        System.out.println("Position Y= " + character.getPosition().coordinates.y);
+        setCurrentMoveCount(1);
+        
     }
 
 
@@ -65,6 +79,7 @@ public class GameController {
 
     public void setCurrentMoveCount(int moveCount) {
         // TODO: IMPLEMENT THIS TO SET CURRENT MOVE COUNT -- exists to be testable
+        status.moveCount = status.moveCount + moveCount;
     }
 
     public int getTotalPositions() {
