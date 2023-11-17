@@ -9,6 +9,8 @@ import ch.qos.logback.core.pattern.PostCompileProcessor;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.startsWith;
 
+import java.awt.Point;
+
 public class GameMapTest {
 
     @Test
@@ -41,6 +43,22 @@ public class GameMapTest {
     
        assertEquals(0, newPosition.getPosition().x); 
        assertEquals(0, newPosition.getPosition().y); 
+
+    }
+
+    @Test
+    public void testIsPositionValid()
+    {
+        GameMap gameMap = new GameMap();
+        
+
+        Point givePointCoordinate = new Point();
+        givePointCoordinate.x = 0;
+        givePointCoordinate.y = 0;
+        
+        Boolean isPosValid = gameMap.isPositionValid(givePointCoordinate);
+
+        assertEquals(true, isPosValid);
 
     }
 }

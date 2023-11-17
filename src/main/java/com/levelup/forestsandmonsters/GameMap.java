@@ -61,5 +61,21 @@ public class GameMap {
 
         return calPosition;
     }
+
+    public boolean isPositionValid(Point positionCoordinate) {
+
+
+        if(positionCoordinate.x <= 9 || positionCoordinate.x >= 0){
+            return true;
+        }
+        else if (positionCoordinate.y <= 9 || positionCoordinate.y >= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
   
 }
