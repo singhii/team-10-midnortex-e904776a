@@ -8,9 +8,12 @@ import org.stringtemplate.v4.compiler.STParser.element_return;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
+import com.levelup.forestsandmonsters.Position;
+
 public class GameMap {
 
     int totalPositions=0;
+    Position position;
 
     public int getTotalPositions() {
         return totalPositions;
@@ -34,23 +37,23 @@ public class GameMap {
         if (direction.equals(DIRECTION.EAST))
         {
            //startPositionX = startingPosition.getPosition().x;
-           newPositionX = startPositionX++;
+           newPositionX = ++startPositionX;
           
         }
         else if(direction.equals(DIRECTION.WEST))
         {
             //startPositionX = startingPosition.getPosition().x;
-            newPositionX = startPositionX--;
+            newPositionX = --startPositionX;
         }
         else if(direction.equals(DIRECTION.NORTH))
         {
             //startPositionY = startingPosition.getPosition().y;
-            newPositionY = startPositionY++;
+            newPositionY = ++startPositionY;
         }
         else if(direction.equals(DIRECTION.SOUTH))
         {
             //startPositionY = startingPosition.getPosition().y;
-            newPositionY = startPositionY--;
+            newPositionY = ++startPositionY;
         }
         else{
             newPositionX = startPositionX;
@@ -77,5 +80,12 @@ public class GameMap {
             return false;
         }
     }
+
+    public Position getPosition(int x, int y)
+   {
+        Position getMapPosition = new Position(x, y);
+
+        return this.position = getMapPosition;
+   }
   
 }
