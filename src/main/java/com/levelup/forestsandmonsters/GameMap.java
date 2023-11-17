@@ -80,12 +80,5 @@ public class GameMap {
             return false;
         }
     }
-
-    public Position getPosition(int x, int y)
-   {
-        Position getMapPosition = new Position(x, y);
-
-        return this.position = getMapPosition;
-   }
   
 }

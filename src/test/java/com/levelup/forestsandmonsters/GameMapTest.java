@@ -43,8 +43,8 @@ public class GameMapTest {
 
        Position newPosition = gameMap.calculatePosition(startingPosition, direction);
     
-       //assertEquals(0, newPosition.getPosition().x); 
-       //assertEquals(0, newPosition.getPosition().y); 
+       assertEquals(1, newPosition.getPosition().x); 
+       assertEquals(0, newPosition.getPosition().y); 
 
     }
 
@@ -64,18 +64,4 @@ public class GameMapTest {
 
     }
 
-    @Test
-    public void testGetPosition()
-    {
-        GameMap gameMap = new GameMap();
-
-        Position testPosition = new Position(0, 0);
-
-        Position getPositionForMap = gameMap.getPosition(0,0);
-
-        //assertEquals(testPosition, getPositionForMap);
-
-
-
-    }
 }
