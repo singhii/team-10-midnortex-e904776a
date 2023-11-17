@@ -47,7 +47,7 @@ public class Character {
         GameMap g = new GameMap();
         Position p = new Position(0,0);
         Position currentPos = getPosition();
-        //p = g.calculatePosition(currentPos,direction);
+        p = g.calculatePosition(currentPos,direction);
         return p;
     }
 
